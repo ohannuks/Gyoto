@@ -1,0 +1,30 @@
+data = gyoto.Star(radius=0.5,metric=(gg=gyoto.KerrBL(spin=0.995)),initcoord=[0, 10.791, 1.5708, 0], [0, 0, 0.0166637],xfill=1)(get_skypos=gyoto.Screen(metric=gg));
+plg, data(,2), data(,1);
+
+data = gyoto.Star(radius=0.5,metric=(gg=gyoto.KerrBL(spin=0.995)),initcoord=[0, 10.791, 1.5708, 0], [0, 0, 0.0166637],xfill=100000)(get_skypos=gyoto.Screen(metric=gg));
+
+# Yorick script:
+
+elapsed= total= cat1= cat2= cat3= array(double, 3);
+elapsed2= total= cat1= cat2= cat3= array(double, 3);
+timer, elapsed;
+for( i=1; i<=100000; ++i ) {
+
+d=gyoto.Star(radius=0.5,metric=(gg=gyoto.KerrBL(spin=0.995)),initcoord=[0, 10.791, 1.5708, 0], [0, 0, 0.0166637],xfill=1)(get_skypos=gyoto.Screen(metric=gg));
+
+}
+
+timer, elapsed2;
+elapsed2 - elapsed
+
+
+timer, elapsed;
+for( i=1; i<=100000; ++i ) {
+
+d=gyoto.Star(radius=0.5,metric=(gg=gyoto.KerrBL(spin=0.995)),initcoord=[0, 10.791, 1.5708, 0], [0, 0, 0.0166637],xfill=100000)(get_skypos=gyoto.Screen(metric=gg));
+
+}
+
+timer, elapsed2;
+elapsed2 - elapsed
+
