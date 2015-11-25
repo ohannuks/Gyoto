@@ -138,7 +138,7 @@ class Gyoto::Astrobj::Star :
   /**
    * The mass of a Star is always 1. Stars do not perturb the
    * metric. The only relevant point is that Stars are massive
-   * particules, their exact mass is of no importance.
+   * particles, their exact mass is of no importance.
    */
   virtual double getMass() const ; ///< Return 1.
 
